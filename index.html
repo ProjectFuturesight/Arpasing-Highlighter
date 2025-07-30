@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Arpasing Highlighter</title>
+<link rel="icon" type="image/x-icon"
+      href="data:image/x-icon;base64,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">
+<style>
+body {
+	background-color: AliceBlue;
+}
+
+.border {
+	border: 2px solid blue;
+	border-radius: 6px;
+	padding: 2px 0; 
+	background-color: white;
+	margin-bottom:2px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+}
+
+.scroll-container {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.list-section {
+	display: flex;
+	align-items: center;
+}
+select {
+	display:table-row;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+	max-height: 2em;
+	
+	-ms-overflow-style: none;  /* IE */
+	scrollbar-width: none;  /* Firefox */
+}
+select::-webkit-scrollbar {
+	display: none; /* Chrome */
+}
+
+option {
+	display:table-cell;
+}
+
+
+.stats-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.stats {
+	display: flex;
+	align-items: center;
+}
+
+.has-missing-container {
+	display: flex;
+	min-height:375px;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.has-section, .missing-section {
+	flex: 1;
+	padding: 10px;
+}
+
+.grid {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4px;
+}
+
+</style>
+
+<body>
+<div class="container">
+    <div class="header border">
+        <input id="fileSelect" type="file" accept=".txt, .csv" oninput="openButtonClick(event)"/>
+    </div>
+    <div class="list-container border">
+        <div class="list-section">
+            <span>Consonants:</span>
+            <select id="CList" size=2 onchange="selectOnChange(event)"></select>
+        </div>
+        <div class="list-section">
+            <span>Vowels:</span>
+            <select id="VList" size=2 onchange="selectOnChange(event)"></select>
+        </div>
+    </div>
+    <div class="stats-container border">
+        <div class="stats">
+            <span>Total Sounds:</span>
+            <span id="totalSounds">#</span>
+        </div>
+        <div class="stats">
+            <span>Total Pairs:</span>
+            <span id="totalPairs">#</span>
+        </div>
+        <div class="stats">
+            <span>Potential Pairs:</span>
+            <span id="totalPotentialPairs">#</span>
+        </div>
+        <button id="copy" onclick="copyToClipboard()">Copy To Clipboard</button>
+    </div>
+    <div class="has-missing-container">
+        <div class="has-section border">
+            <span>Has:</span>
+            <div class="grid">
+                <ul id="hasCCVV" class="list-view"></ul>
+                <ul id="hasCV" class="list-view"></ul>
+                <ul id="hasVC" class="list-view"></ul>
+            </div>
+        </div>
+        <div class="missing-section border">
+            <span>Missing:</span>
+            <div class="grid">
+                <ul id="misCCVV" class="list-view"></ul>
+                <ul id="misCV" class="list-view"></ul>
+                <ul id="misVC" class="list-view"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+const Cs = new Set();
+const Vs = new Set();
+
+const CCs = new Map();
+const VVs = new Map();
+const CVs = new Map();
+const VCs = new Map();
+
+const notCCs = new Set();
+const notVVs = new Set();
+const notCVs = new Set();
+const notVCs = new Set();
+
+const superscripts = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+const reader = new FileReader();
+reader.onload = function(e){
+	setContent(e.target.result.split(/\r?\n/));
+}
+
+function openButtonClick(event){
+	if (!event.returnValue) return;
+	const file = event.target.files[0];
+	if (!file) return;
+	reader.readAsText(file);
+}
+if (fileSelect.files[0]) {
+	reader.readAsText(fileSelect.files[0]);
+}
+
+function updateList(DOMList, dataSet) {
+	DOMList.innerText="";
+	dataSet.forEach((i) => {
+		DOMList.appendChild(document.createElement('option')).innerText = i;
+	});
+}
+
+function LineToString( lv ) {
+	if ( lv.Count == 0 ) return "";
+	
+	return lv.innerText.split("\n").join(" ") + '\n';
+}
+
+function copyToClipboard() {
+	const s = "```\nhas:\n"
+		+ LineToString( hasCCVV )
+		+ LineToString( hasCV )
+		+ LineToString( hasVC  )
+		+ "\nmissing:\n"
+		+ LineToString( misCCVV )
+		+ LineToString( misCV )
+		+ LineToString( misVC )
+		+ "```";
+	navigator.clipboard.writeText(s).catch(() => { copy.style.backgroundColor='red'});
+}
+
+function intToSuperscript(n=0) {
+	const superscriptedString = n.toString().split('').map(digit => superscripts[digit]).join('');
+	return `⁽${superscriptedString}⁾`;
+}
+
+function isVowel(s) {
+	return "aeiou".includes(s[0]);
+}
+
+function setContent(lines) {
+	Cs.clear();
+	Vs.clear();
+	CCs.clear();
+	VVs.clear();
+	CVs.clear();
+	VCs.clear();
+	lines.forEach(line => {
+		const words = parseLine(line.toLowerCase());
+		for (let i = 1; i < words.length; i++) {
+			addToProperSet([words[i-1], words[i]]);
+		}
+	});
+	findMissings();
+	updateList(CList, Cs);
+	updateList(VList, Vs);
+	document.getElementById('totalSounds').innerText = Cs.size + Vs.size;
+	document.getElementById('totalPairs').innerText = CCs.size + VVs.size + CVs.size + VCs.size;
+	document.getElementById('totalPotentialPairs').innerText = 2 * Cs.size * Vs.size + Cs.size * Cs.size + Vs.size * Vs.size;
+}
+
+async function findMissings() {
+	notVVs.clear();
+	notVCs.clear();
+	notCVs.clear();
+	notCCs.clear();
+	Vs.forEach(v1 => {
+		Vs.forEach(v2 => { notVVs.add([v1, v2].toString()); });
+		Cs.forEach(c2 => { notVCs.add([v1, c2].toString()); });
+	});
+	Cs.forEach(c1 => {
+		Vs.forEach(v2 => { notCVs.add([c1, v2].toString()); });
+		Cs.forEach(c2 => { notCCs.add([c1, c2].toString()); });
+	});
+	notVVs.forEach((x,_,s) => { if (VVs.has(x.toString())) { s.delete(x); } });
+	notVCs.forEach((x,_,s) => { if (VCs.has(x.toString())) { s.delete(x); } });
+	notCVs.forEach((x,_,s) => { if (CVs.has(x.toString())) { s.delete(x); } });
+	notCCs.forEach((x,_,s) => { if (CCs.has(x.toString())) { s.delete(x); } });
+}
+
+function selectOnChange(e) {
+	var s = e.target.value;
+	if (!s) return;
+	s = s.toLowerCase();
+
+	const f = (w) => w.split(',').includes(s);
+	const fkvp = ([k,v]) => k.split(',').includes(s);
+
+	const g = (w) => w.split(',').join(' ');
+	const gkvp = ([k,v]) => `${g(k)} ${intToSuperscript(v)}`;
+
+	setItems(hasCCVV, Array.from((isVowel(s) ? VVs : CCs)).filter(fkvp).sort((a, b) => a[0].localeCompare(b[0])).map(gkvp));
+	setItems(hasCV, Array.from(CVs).filter(fkvp).sort((a, b) => a[0].localeCompare(b[0])).map(gkvp));
+	setItems(hasVC, Array.from(VCs).filter(fkvp).sort((a, b) => a[0].localeCompare(b[0])).map(gkvp));
+	setItems(misCCVV, Array.from((isVowel(s) ? notVVs : notCCs)).filter(f).sort().map(g));
+	setItems(misCV, Array.from(notCVs).filter(f).sort().map(g));
+	setItems(misVC, Array.from(notVCs).filter(f).sort().map(g));
+}
+
+function setItems(DOMList, items) {
+	DOMList.innerText="";
+	items.forEach((i) => {
+		DOMList.appendChild(document.createElement('li')).innerText=i;
+	});
+}
+
+function addToProperSet(pair) {
+	const i1v = isVowel(pair[0]);
+	const i2v = isVowel(pair[1]);
+	(i1v ? Vs : Cs).add(pair[0]);
+	(i2v ? Vs : Cs).add(pair[1]);
+	let CCVV;
+	if (i1v) {
+		CCVV = i2v ? VVs : VCs; // item1 is V
+	} else {
+		CCVV = i2v ? CVs : CCs; // item1 is C
+	}
+	let num = CCVV.get(pair.toString()) || 0; 
+	CCVV.set(pair.toString(), num + 1);
+}
+
+function parseLine( line ) {
+	if (line.includes('\t') || line.includes(',')) {
+		line = line.split(/\t|,/).pop();
+	}
+	if (line.includes('(')) {
+		line = line.split(/\(|\)/)[1];
+	}
+
+	line = line.replace(/-/g, '');
+	return line.split(/ |_/).filter(x => x.length > 0 && x.length < 7 && !'0123456789'.includes(x[0]));
+}
+
+</script>
